@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+     <ScrollView
+         android:layout_width="match_parent"
+         android:fillViewport="true"
+         android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+
+            <test.android.view.DountChartView2
+                android:id="@+id/doutChart2"
+                android:layout_width="wrap_content"
+                app:centerLineColor="@color/colorAccent"
+                app:centLineWidth="10dp"
+                app:centLineLength="50dp"
+                app:topInfoTextSize="15sp"
+                app:bgColor="#ffeeeeee"
+                app:bottomInfoTextSize="15sp"
+                app:lableTextSize="15sp"
+                app:topInfoPadingBottom="0dp"
+                app:bottomInfoPaddingTop="0dp"
+                app:isDrawLableText="true"
+                android:layout_height="200dp" />
+
+            <test.android.view.DountChartView
+            android:id="@+id/doutChart"
+            android:layout_width="wrap_content"
+            app:centerLineColor="@color/colorAccent"
+            app:centLineWidth="10dp"
+            app:centLineLength="50dp"
+            app:topInfoTextSize="15sp"
+            app:bgColor="#ffeeeeee"
+            app:bottomInfoTextSize="15sp"
+            app:lableTextSize="15sp"
+            app:topInfoPadingBottom="0dp"
+            app:bottomInfoPaddingTop="0dp"
+            app:isDrawLableText="true"
+            android:layout_height="200dp" />
+            <test.android.view.BarChart
+                android:id="@+id/barchart"
+                android:layout_width="match_parent"
+                app:hLineColor="#FFDCDCDC"
+                app:hLineSize="1dp"
+                app:sideLineColor="#FFDCDCDC"
+                app:bottomLablesTextColor="#FF666666"
+                app:sideLineSize="1dp"
+                app:lablePaddingBottom="5dp"
+                app:lablesTextSize="15sp"
+                app:drawHLine="true"
+                app:drawSideLine="true"
+                app:bottomLablesTextSize="15sp"
+                app:spaceBarPercent="1.3"
+                app:contentPercent="0.75"
+                app:isSysncLableColor="false"
+                android:background="#ffff00"
+                app:drawLables="true"
+                app:bottomLablesPaddingTop="5dp"
+                android:layout_height="200dp" />
+            <test.android.view.CanvasView
+                android:id="@+id/canvasView"
+                android:layout_width="match_parent"
+                android:layout_height="400dp" />
+
+            <test.android.view.CutLineLayout
+                android:id="@+id/cutline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <test.android.view.FunnelChart
+                android:id="@+id/fullchart"
+                android:layout_width="match_parent"
+                app:isLineColorSync="true"
+                app:maxLine="200dp"
+                app:lineLenght="20dp"
+                app:textColor="@color/colorAccent"
+                app:textSize="15sp"
+                android:layout_height="200dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="800dp"
+                android:text="底部"
+                />
+        </LinearLayout>
+     </ScrollView>
+
+
+</LinearLayout>

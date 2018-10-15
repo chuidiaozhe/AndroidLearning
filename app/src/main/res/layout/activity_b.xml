@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"   android:layout_width="match_parent"
+     android:layout_height="match_parent">
+     <Button
+         android:id="@+id/btn_share"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="分享"
+         />
+    <Button
+        android:id="@+id/btn_open_pdf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打开文件PDF"
+        />
+    <Button
+        android:id="@+id/btn_open_doc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打开文件DOC"
+        />
+    <Button
+        android:id="@+id/btn_open_PPT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打开文件PPT"
+        />
+    <Button
+        android:id="@+id/btn_open_execle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打开文件Execle"
+        />
+    <Button
+        android:id="@+id/btn_open_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打开文件图片"
+         />
+     <EditText
+         android:id="@+id/edt_downloadUrl"
+         android:hint="请输入要下载文件的URL"
+         android:textColor="@android:color/black"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_download"
+        android:layout_width="match_parent"
+        android:text="下载"
+        android:layout_height="wrap_content" />
+      <android.inputmethodservice.KeyboardView
+          android:id="@+id/keyboard"
+          android:layout_width="match_parent"
+           android:layout_height="match_parent"
+          android:layout_gravity="bottom"
+          android:keyPreviewHeight="0dp"
+          android:keyPreviewLayout="@null"
+          android:keyBackground="@color/colorAccent"
+          android:keyTextColor="@android:color/black"
+          android:keyTextSize="15sp"
+          android:labelTextSize="16sp"
+          >
+
+      </android.inputmethodservice.KeyboardView>
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BarChart">
+        <attr name="drawBottomLables" format="boolean"></attr>
+        <attr name="bottomLablesTextSize" format="dimension"></attr>
+        <attr name="bottomLablesTextColor" format="color"></attr>
+        <attr name="bottomLablesPaddingTop" format="dimension"></attr>
+        <attr name="sideLineColor" format="color"></attr>
+        <attr name="sideLineSize" format="dimension"></attr>
+        <attr name="drawSideLine" format="boolean"></attr>
+        <attr name="drawHLine" format="boolean"></attr>
+        <attr name="hLineColor" format="color"></attr>
+        <attr name="hLineSize" format="dimension"></attr>
+        <attr name="drawLables" format="boolean"></attr>
+        <attr name="lablesTextColor" format="color"></attr>
+        <attr name="lablesTextSize" format="dimension"></attr>
+        <attr name="lablePaddingBottom" format="dimension"></attr>
+        <attr name="spaceBarPercent" format="float"></attr>
+        <attr name="contentPercent" format="float"></attr>
+        <attr name="hLineNum" format="integer"></attr>
+        <attr name="isSysncLableColor" format="boolean"></attr>
+        <attr name="viewheight" format="dimension"></attr>
+        <attr name="viewwidht" format="dimension"></attr>
+    </declare-styleable>
+    <declare-styleable name="FunnelChart">
+        <attr name="textColor" format="color"></attr>
+        <attr name="lineColor" format="color"></attr>
+        <attr name="textSize" format="dimension"></attr>
+        <attr name="maxLine" format="dimension"></attr>
+        <attr name="isLineColorSync" format="boolean"></attr>
+        <attr name="lineLenght" format="dimension"></attr>
+        <attr name="textPading" format="dimension"></attr>
+        <attr name="lineWidht" format="dimension"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="DountChartView">
+        <attr name="outRadius" format="dimension"></attr>
+        <attr name="startAngle" format="float"></attr>
+        <attr name="lineLength" format="dimension"></attr>
+        <attr name="lineHLength" format="dimension"></attr>
+        <attr name="linewidth" format="dimension"></attr>
+        <attr name="lableTextSize" format="dimension"></attr>
+        <attr name="lableTextColor" format="color"></attr>
+        <attr name="lineColors" format="color"></attr>
+        <attr name="isSyncLineColor" format="boolean"></attr>
+        <attr name="isSyncTextColor" format="boolean"></attr>
+        <attr name="topInfoTextSize" format="dimension"></attr>
+        <attr name="topInfoTextColor" format="color"></attr>
+        <attr name="bottomInfoTextSize" format="dimension"></attr>
+        <attr name="bottomInfoTextColor" format="color"></attr>
+        <attr name="centerLineColor" format="color"></attr>
+        <attr name="centLineLength" format="dimension"></attr>
+        <attr name="centLineWidth" format="dimension"></attr>
+        <attr name="topInfoPadingBottom" format="dimension"></attr>
+        <attr name="bottomInfoPaddingTop" format="dimension"></attr>
+        <attr name="bgColor" format="color"></attr>
+        <attr name="textPading2" format="dimension"></attr>
+         <attr name="textHPading" format="dimension"></attr>
+        <attr name="isDrawLableText" format="boolean"></attr>
+        <attr name="default_topinfo" format="string"></attr>
+        <attr name="default_bottominfo" format="string"></attr>
+    </declare-styleable>
+
+    <!--<declare-styleable name="DountChartView">-->
+        <!--<attr name="outRadius" format="dimension"></attr>-->
+    <!--</declare-styleable>-->
+</resources>

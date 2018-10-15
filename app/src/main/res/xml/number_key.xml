@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:keyWidth="100%"
+    android:keyHeight="40dp"
+    >
+ <Row>
+     <Key android:codes="1" android:keyLabel="1" android:keyOutputText="1a"></Key>
+     <Key android:codes="2" android:keyLabel="2" android:keyOutputText="2a"></Key>
+     <Key android:codes="3" android:keyLabel="3" android:keyOutputText="3a"></Key>
+     <Key android:codes="4" android:keyLabel="4" android:keyOutputText="4a"></Key>
+ </Row>
+    <Row>
+        <Key android:codes="50" android:keyLabel="5" android:keyOutputText="5s"></Key>
+        <Key android:codes="6" android:keyLabel="6" android:keyOutputText="6s"></Key>
+        <Key android:codes="7" android:keyLabel="7" android:keyOutputText="7s"></Key>
+        <Key android:codes="8" android:keyLabel="8" android:keyOutputText="8s"></Key>
+    </Row>
+    <Row>
+
+        <Key android:codes="100" android:keyLabel="确认" ></Key>
+    </Row>
+</Keyboard>
