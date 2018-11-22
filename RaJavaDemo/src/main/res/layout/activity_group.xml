@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <Button
+            android:id="@+id/btn_concat"
+          style="@style/button_style"
+            android:text="concat 操作符"
+            />
+        <Button
+            android:id="@+id/btn_concatarray"
+            style="@style/button_style"
+            android:text="concatarray 操作符"
+            />
+        <Button
+            android:id="@+id/btn_merge"
+            style="@style/button_style"
+            android:text="merge 操作符"
+            />
+        <Button
+            android:id="@+id/btn_conncatarray_delayerror"
+            style="@style/button_style"
+            android:text="conncatArrayDelayError操作符"
+            />
+        <Button
+            android:id="@+id/btn_mergearray_delayerror"
+            style="@style/button_style"
+            android:text="mergeArrayDelayError操作符"
+            />
+        <Button
+            android:id="@+id/btn_zip"
+            style="@style/button_style"
+            android:text="zip操作符"
+            />
+        <Button
+            android:id="@+id/btn_combinelatest"
+            style="@style/button_style"
+            android:text="combinelatest操作符"
+            />
+        <Button
+        android:id="@+id/btn_combinelatestdelayerror"
+        style="@style/button_style"
+        android:text="combinelatest操作符"
+        />
+        <Button
+            android:id="@+id/btn_reduce"
+            style="@style/button_style"
+            android:text="Reduce操作符"
+            />
+        <Button
+            android:id="@+id/btn_collect"
+            style="@style/button_style"
+            android:text="Collect操作符"
+            />
+        <Button
+            android:id="@+id/btn_startWith"
+            style="@style/button_style"
+            android:text="startWith操作符"
+            />
+        <Button
+            android:id="@+id/btn_startWithArray"
+            style="@style/button_style"
+            android:text="startWithArray操作符"
+            />
+        <Button
+            android:id="@+id/btn_count"
+            style="@style/button_style"
+            android:text="count操作符"
+            />
+    </LinearLayout>
+
+</ScrollView>

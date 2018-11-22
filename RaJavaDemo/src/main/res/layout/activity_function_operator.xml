@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:splitMotionEvents="false"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         >
+         <Button
+             android:id="@+id/btn_delay"
+             style="@style/button_style"
+             android:text="delay 操作符"
+             />
+         <Button
+             android:id="@+id/btn_dooneach"
+             style="@style/button_style"
+             android:text="doOnEach操作符"
+             />
+         <Button
+             android:id="@+id/btn_doonnext"
+             style="@style/button_style"
+             android:text="doOnNext操作符"
+             />
+         <Button
+             android:id="@+id/btn_doafternext"
+             style="@style/button_style"
+             android:text="doAfterNext操作符"
+             />
+         <Button
+             android:id="@+id/btn_dooncomplete"
+             style="@style/button_style"
+             android:text="doOnComplete操作符"
+             />
+         <Button
+             android:id="@+id/btn_doonerror"
+             style="@style/button_style"
+             android:text="doOnError操作符"
+             />
+         <Button
+             android:id="@+id/btn_doonsubscribe"
+             style="@style/button_style"
+             android:text="doOnSubscribe操作符"
+             />
+         <Button
+             android:id="@+id/btn_doondispose"
+             style="@style/button_style"
+             android:text="doOnDispose操作符"
+             />
+     </LinearLayout>
+</ScrollView>

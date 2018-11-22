@@ -1,5 +1,6 @@
 package test.android.com.androidtest2;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -23,6 +24,13 @@ public class TestErrorViewActivity extends AppCompatActivity  implements View.On
         findViewById(R.id.btn_no_data).setOnClickListener(this);
         findViewById(R.id.btn_no_network).setOnClickListener(this);
         findViewById(R.id.btn_show_main).setOnClickListener(this);
+
+        errorView.setErrorText("fdkjadjfadjkl");
+        errorView.setErrorTextColor(getResources().getColor(R.color.colorPrimary));
+
+        errorView.getErrorView().findViewById(R.id.doutChart2);
+
+
      }
 
     @Override

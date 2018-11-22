@@ -1,1 +1,1 @@
-include ':app', ':MPAndroidChart', ':XclCharts', ':mylibrary', ':WebApp', ':materialdesigndemo', ':RaJavaDemo'
+include ':app', ':MPAndroidChart', ':XclCharts', ':mylibrary', ':materialdesigndemo', ':RaJavaDemo', ':CameraDemo'

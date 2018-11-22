@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CreateOperatorActivity"></activity>
+        <activity android:name=".SwitchOperatorActivity"></activity>
+        <activity android:name=".GroupActivity"></activity>
+        <activity android:name=".FunctionOperatorActivity"></activity>
     </application>
 
 </manifest>

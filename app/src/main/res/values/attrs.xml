@@ -64,4 +64,9 @@
     <!--<declare-styleable name="DountChartView">-->
         <!--<attr name="outRadius" format="dimension"></attr>-->
     <!--</declare-styleable>-->
+
+    <declare-styleable name="ErrorView">
+        <attr name="no_network" format="reference"></attr>
+        <attr name="error" format="reference"></attr>
+    </declare-styleable>
 </resources>
