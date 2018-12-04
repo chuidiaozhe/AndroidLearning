@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View" alias="ViewGone"></import>
+        <import type="java.util.List"></import>
+        <import type="com.andorid.databinding.demo.User"></import>
+        <import type="com.andorid.databinding.demo.StringUtils"/>
+
+           <variable
+            name="user"
+            type="com.andorid.databinding.demo.User"/>
+         <variable
+             name="userList"
+             type="List&lt;User>"></variable>
+        <variable
+            name="clickListener"
+            type="com.andorid.databinding.demo.DatabindingExpressinosActivity.ClickListener"/>
+    </data>
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{user.firsetName}"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:text="@{user.lastName}"
+            />
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             android:text="@{@string/format(user.firsetName,user.lastName)}"
+            />
+        <TextView
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{StringUtils.getName(user)}"
+            />
+        <include layout="@layout/view_user"
+            bind:user="@{user}"
+            ></include>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@{user.lastName.length() == 3 ? @dimen/dp_large : @dimen/dp_small}"
+            android:text="@{@string/str_hello_word}"
+            />
+        <TextView
+            android:id="@+id/tv_plurals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{@plurals/select(1,'3')}"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="简单的点击事件"
+            android:visibility="@{user.firsetName.length()> 1 ? ViewGone.VISIBLE : ViewGone.GONE}"
+            android:onClick="@{(view)->clickListener.simpleClick()}"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="返回User"
+            android:onClick="@{(view)->clickListener.callBackUser(user)}"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="长按的点击事件"
+            android:onLongClickListener="@{(theView)->clickListener.onLongClickListener()}"
+            />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="复选框"
+            android:onCheckedChanged="@{(view,isCheckedss)->clickListener.onCheckChange(isCheckedss)}"
+            />
+    </LinearLayout>
+</layout>

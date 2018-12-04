@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">DataBindingDemo</string>
+    <string name="format">%1$s%2$s</string>
+    <string name="str_hello_word">hello word</string>
+    <string name="login_des">账号：%1$s 密码：%2$s</string>
+
+    <plurals name="select">
+        <item quantity="zero">zero</item>
+         <item quantity="one">one</item>
+        <item quantity="other">%s select</item>
+     </plurals>
+</resources>

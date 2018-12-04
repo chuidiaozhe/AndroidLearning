@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="string"
+            type="String"></variable>
+        <variable
+            name="click"
+            type="com.andorid.databinding.demo.MainActivity.MainActivityClickListener"></variable>
+
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+       <Button
+           android:id="@+id/btn_binding_start"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="layouts and binding expression "
+           android:onClick="@{()->click.openExpressionsActivity()}"
+            />
+
+        <Button
+             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RecyclerView adapter binding"
+            android:onClick="@{()->click.openRecyclerViewActivity()}"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="binding adapter"
+            android:onClick="@{()->click.openBindingAdapterActivity()}"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="twowary activity"
+            android:onClick="@{()->click.openTwoWayActivity()}"
+            />
+    </LinearLayout>
+</layout>

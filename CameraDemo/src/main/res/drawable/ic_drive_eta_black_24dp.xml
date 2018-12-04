@@ -1,0 +1,32 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="24dp"
+        android:height="24dp"
+        android:viewportWidth="100.0"
+        android:viewportHeight="100.0">
+    <path
+        android:fillColor="#000000"
+        android:name="黑鱼"
+        android:pathData="M0 50,
+        A50 50 0 0 1 50 0,
+        A25 25 0 0 0 50 50,
+        A25 25 0 0 1 50 100,
+        A50 50 0 0 1 0 50"/>
+    <path
+        android:fillColor="#ffffff"
+        android:name="白眼"
+        android:pathData="M43 75,A7 7 0 1 1 57 75, A7 7 0 1 1 43 75"/>
+    <!--右边画一个半圆-->
+    <path
+        android:fillColor="#FFFFFF"
+        android:name="白鱼"
+        android:pathData="M50 0,
+        A50 50 0 1 1 50 100,
+        A25 25 0 1 0 50 50,
+        A25 25 0 1 1 50 0"/>
+    <path
+        android:fillColor="#000000"
+        android:name="黑眼"
+        android:pathData="M43 25,A7 7 0 1 1 57 25, A7 7 0 1 1 43 25"/>
+
+
+</vector>

@@ -78,7 +78,7 @@ public class ErrorView extends FrameLayout {
         if(noNetworkView != null){
             addView(noNetworkView);
             noNetworkView.setVisibility(View.GONE);
-            noNetworkView.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+             noNetworkView.setBackgroundColor(mContext.getResources().getColor(R.color.colorAccent,null));
         }
 
         if(noDataView != null){

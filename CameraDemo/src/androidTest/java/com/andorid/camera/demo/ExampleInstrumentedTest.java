@@ -1,13 +1,24 @@
 package com.andorid.camera.demo;
 
-import android.content.Context;
-import android.support.test.InstrumentationRegistry;
+
 import android.support.test.runner.AndroidJUnit4;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import static org.junit.Assert.*;
+import java.io.UnsupportedEncodingException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.security.GeneralSecurityException;
+import java.security.SecureRandom;
+import java.util.Base64;
+
+import javax.crypto.Cipher;
+import javax.crypto.KeyGenerator;
+import javax.crypto.SecretKey;
+import javax.crypto.spec.SecretKeySpec;
+
 
 /**
  * Instrumented test, which will execute on an Android device.
@@ -16,11 +27,10 @@ import static org.junit.Assert.*;
  */
 @RunWith(AndroidJUnit4.class)
 public class ExampleInstrumentedTest {
-    @Test
-    public void useAppContext() {
-        // Context of the app under test.
-        Context appContext = InstrumentationRegistry.getTargetContext();
-
-        assertEquals("com.andorid.camera.demo", appContext.getPackageName());
-    }
+     @Test
+    public void testAes() throws GeneralSecurityException {
+     String time = "123456789dfjdk";
+         String encryptedMsg = AESCrypt.encrypt("HLjmc2loveJzhi12", time);
+         System.out.println("加密后的字符串:" + encryptedMsg);
+   }
 }
