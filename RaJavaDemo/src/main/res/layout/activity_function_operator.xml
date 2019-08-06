@@ -47,5 +47,76 @@
              style="@style/button_style"
              android:text="doOnDispose操作符"
              />
+
+         <Button
+             android:id="@+id/btn_doonLifecycle"
+             style="@style/button_style"
+             android:text="doOnLifecycle操作符"
+             />
+         <Button
+             android:id="@+id/btn_doOnTerminate"
+             style="@style/button_style"
+             android:text="doOnterminate操作符"
+             />
+         <Button
+             android:id="@+id/btn_doAfterTerminate"
+             style="@style/button_style"
+             android:text="doAfterTerminate操作符"
+             />
+         <Button
+             android:id="@+id/btn_doFinally"
+             style="@style/button_style"
+             android:text="doFinally操作符"
+             />
+         <Button
+             android:id="@+id/btn_onErrorReturn"
+             style="@style/button_style"
+             android:text="onErrorReturn操作符"
+             />
+         <Button
+             android:id="@+id/btn_onErrorResumeNext"
+             style="@style/button_style"
+             android:text="onErrorResumeNext操作符"
+             />
+         <Button
+             android:id="@+id/btn_onExceptionResumeNext"
+             style="@style/button_style"
+             android:text="onExceptionResumeNext操作符"
+             />
+         <Button
+             android:id="@+id/btn_reTry"
+             style="@style/button_style"
+             android:text="retry操作符"
+             />
+         <Button
+             android:id="@+id/btn_retryuntil"
+             style="@style/button_style"
+             android:text="retryUntil操作符"
+             />
+         <Button
+             android:id="@+id/btn_retryWhen"
+             style="@style/button_style"
+             android:text="retryWhen操作符"
+             />
+         <Button
+             android:id="@+id/btn_repeat"
+             style="@style/button_style"
+             android:text="repeat操作符"
+             />
+         <Button
+             android:id="@+id/btn_repeatWhen"
+             style="@style/button_style"
+             android:text="repeatWhen操作符"
+             />
+         <Button
+             android:id="@+id/btn_subscribeOn"
+             style="@style/button_style"
+             android:text="subscribeOn操作符"
+             />
+         <Button
+             android:id="@+id/btn_observeOn"
+             style="@style/button_style"
+             android:text="observeOn操作符"
+             />
      </LinearLayout>
 </ScrollView>

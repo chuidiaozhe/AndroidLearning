@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.android.rajava2.TimeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,6 +20,8 @@
         <activity android:name=".SwitchOperatorActivity"></activity>
         <activity android:name=".GroupActivity"></activity>
         <activity android:name=".FunctionOperatorActivity"></activity>
+        <activity android:name=".FilterActivity"></activity>
+        <activity android:name=".ConditionActivity"></activity>
     </application>
 
 </manifest>

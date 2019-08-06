@@ -1,1 +1,2 @@
-include /*':app', ':MPAndroidChart', ':XclCharts', ':mylibrary', ':materialdesigndemo', ':RaJavaDemo', ':CameraDemo', ':jiaMi',*/ ':DataBindingDemo'
+include ':architecturecompontsdemo', ':RecyclerViewDemo', ':CanvasDemo', ':PhotoViewMode'
+include  ':app', ':MPAndroidChart', ':mylibrary', ':materialdesigndemo', /*':RaJavaDemo',*/ ':CameraDemo', ':jiaMi',  ':DataBindingDemo'

@@ -4,6 +4,8 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.DisplayMetrics;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
 
@@ -25,6 +27,8 @@ public class GuideActivity extends AppCompatActivity  implements View.OnClickLis
         setContentView(R.layout.activity_guide);
 
         findViewById(R.id.btn_simple_user).setOnClickListener(this);
+
+        
     }
 
     @Override
@@ -33,7 +37,7 @@ public class GuideActivity extends AppCompatActivity  implements View.OnClickLis
             case R.id.btn_simple_user:
                 //引导层的简单使用
                 simpleUse();
-                break;
+                 break;
         }
     }
 

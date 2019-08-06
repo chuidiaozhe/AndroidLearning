@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_switch_operator).setOnClickListener(this);
         findViewById(R.id.btn_group_operator).setOnClickListener(this);
         findViewById(R.id.btn_function_operator).setOnClickListener(this);
+        findViewById(R.id.btn_filter_operator).setOnClickListener(this);
+        findViewById(R.id.btn_condition_operator).setOnClickListener(this);
 
         simple();
     }
@@ -51,6 +53,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_function_operator:
                 intent = new Intent(MainActivity.this,FunctionOperatorActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_filter_operator:
+                intent = new Intent(MainActivity.this,FilterActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_condition_operator:
+                intent = new Intent(MainActivity.this,ConditionActivity.class);
                 startActivity(intent);
                 break;
         }

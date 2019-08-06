@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
@@ -27,11 +28,9 @@ public class TestErrorViewActivity extends AppCompatActivity  implements View.On
         findViewById(R.id.btn_show_main).setOnClickListener(this);
 
         errorView.setErrorText("fdkjadjfadjkl");
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            errorView.setErrorTextColor(getResources().getColor(R.color.colorPrimary,null));
-        }else{
-            errorView.setErrorTextColor(getResources().getColor(R.color.colorPrimary));
-        }
+
+            errorView.setErrorTextColor(ContextCompat.getColor(this,R.color.colorPrimary));
+
 
         errorView.getErrorView().findViewById(R.id.doutChart2);
 

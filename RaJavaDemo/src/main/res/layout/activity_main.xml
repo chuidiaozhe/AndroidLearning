@@ -27,6 +27,16 @@
          style="@style/button_style"
          android:text="功能操作符"
          />
+    <Button
+        android:id="@+id/btn_filter_operator"
+        style="@style/button_style"
+        android:text="过滤操作符"
+        />
+    <Button
+        android:id="@+id/btn_condition_operator"
+        style="@style/button_style"
+        android:text="条件操作符"
+        />
       <android.support.constraint.ConstraintLayout
           android:layout_width="match_parent"
           android:layout_height="match_parent">

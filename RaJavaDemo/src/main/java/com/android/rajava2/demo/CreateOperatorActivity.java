@@ -106,7 +106,7 @@ public class CreateOperatorActivity extends AppCompatActivity  implements View.O
      * 获得一个观察者
      * @return
      */
-    private Observer<String> getObserver(){
+    public Observer<String> getObserver(){
         Observer<String> observer  = new Observer<String>() {
             @Override
             public void onSubscribe(Disposable d) {

@@ -27,6 +27,11 @@ android {
         targetCompatibility = '1.8'
     }
 
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
 }
 
 dependencies {

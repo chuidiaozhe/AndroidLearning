@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white"
+    android:layout_height="match_parent">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       >
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:textSize="14sp"
+           android:textColor="@android:color/black"
+           android:text="发帖时间："
+           />
+       <EditText
+           android:id="@+id/edt_fatie"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:textColor="@android:color/black"
+           android:textSize="14sp"
+           tools:text="2018年12月14日 下午9:04"
+           android:hint="输入时间"
+           />
+   </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:text="回帖1时间："
+            />
+        <EditText
+            android:id="@+id/edt_huitie1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            tools:text="2018年12月14日 下午9:04"
+            android:hint="输入时间"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:text="回帖2时间："
+            />
+        <EditText
+            android:id="@+id/edt_huitie2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            tools:text="2018年12月14日 下午9:04"
+            android:hint="输入时间"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:text="回帖2时间 - 回帖1时间"
+        android:layout_marginTop="10dp"
+        />
+    <EditText
+        android:id="@+id/restult_1"
+         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        tools:text="2018年12月14日 下午9:04"
+        android:hint="结果"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:text="回帖1时间 - 发帖时间"
+        android:layout_marginTop="10dp"
+        />
+    <EditText
+        android:id="@+id/restult_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        tools:text="2018年12月14日 下午9:04"
+        android:hint="结果"
+        />
+</LinearLayout>

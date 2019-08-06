@@ -14,7 +14,7 @@ import com.bumptech.glide.request.RequestOptions;
  * on 2018/11/29 11:21 AM
  */
 public class BindingAdapterUtil {
-     @BindingAdapter({"app:imageUrl","app:placeholder"})
+     @BindingAdapter({"imageUrl","placeholder"})
     public static void loadImage(ImageView imageView, String url, Drawable placeDrawable){
          RequestOptions requestOptions  = new RequestOptions()
                  .skipMemoryCache(true)
