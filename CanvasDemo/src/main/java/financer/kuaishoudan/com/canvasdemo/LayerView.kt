@@ -1,9 +1,13 @@
 package financer.kuaishoudan.com.canvasdemo
 
+import android.content.ContentProvider
 import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
+import android.view.MotionEvent
 import android.view.View
+import android.widget.ScrollView
+import android.widget.Scroller
 
 /**
  * Create by Xiangshifu
@@ -11,6 +15,10 @@ import android.view.View
  */
 
 class LayerView(context: Context?) : View(context) {
+    lateinit var mContext : Context
+    init {
+        this.mContext = context!!
+    }
 
     constructor(context: Context?,attributes : AttributeSet?) : this(context)
 
@@ -39,6 +47,27 @@ class LayerView(context: Context?) : View(context) {
 
         }
 
+    }
+
+
+    override fun onTouchEvent(event: MotionEvent?): Boolean {
+        event?.let {
+            var startX:Int = 0
+            var startY : Int = 0
+             when (event.action){
+                 MotionEvent.ACTION_DOWN ->{
+                     startX = event.x.toInt()
+                     startY = event.y.toInt()
+                 }
+                 MotionEvent.ACTION_UP ->{
+                     var dy = event.x - startY
+                     var dx = event.y - startX
+                     scrollBy(dx.toInt(),dy.toInt())
+                 }
+             }
+            return true
+        }
+        return super.onTouchEvent(event)
     }
 
 }

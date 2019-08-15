@@ -20,4 +20,9 @@ public class LView extends View {
     public LView(Context context,  AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
+
+    @Override
+    public void computeScroll() {
+        super.computeScroll();
+    }
 }

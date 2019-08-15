@@ -20,6 +20,7 @@
         <activity android:name=".InteractionWithTheChartActivity" android:screenOrientation="portrait"/>
         <activity android:name=".HighLightingActivity" android:screenOrientation="portrait"/>
         <activity android:name=".YAxisActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".LineChartActivity" android:screenOrientation="portrait"/>
 
     </application>
 

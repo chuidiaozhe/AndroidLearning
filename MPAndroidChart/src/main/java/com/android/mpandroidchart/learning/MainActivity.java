@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         listItem.add(new ItemBean("Interaction with the Chart",InteractionWithTheChartActivity.class));
         listItem.add(new ItemBean("Highlighting",HighLightingActivity.class));
         listItem.add(new ItemBean("YAxis",YAxisActivity.class));
+        listItem.add(new ItemBean("LineChart",LineChartActivity.class));
     }
 
 
