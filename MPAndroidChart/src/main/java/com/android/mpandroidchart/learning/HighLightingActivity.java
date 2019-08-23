@@ -46,6 +46,12 @@ public class HighLightingActivity extends AppCompatActivity {
         xAxis.setTextColor(Color.BLACK);
         xAxis.setLabelRotationAngle(90);
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+//        xAxis.setValueFormatter(new ValueFormatter() {
+//            @Override
+//            public String getFormattedValue(float value) {
+//                return value+"ddd";
+//            }
+//        });
         xAxis.setValueFormatter(new IAxisValueFormatter() {
             @Override
             public String getFormattedValue(float value, AxisBase axis) {

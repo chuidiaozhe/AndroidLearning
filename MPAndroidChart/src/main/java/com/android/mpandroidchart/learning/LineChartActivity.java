@@ -1,6 +1,7 @@
 package com.android.mpandroidchart.learning;
 
 import android.graphics.Color;
+import android.graphics.DashPathEffect;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.components.Legend;
 import com.github.mikephil.charting.components.LegendEntry;
@@ -18,7 +20,9 @@ import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.formatter.DefaultAxisValueFormatter;
 import com.github.mikephil.charting.formatter.IAxisValueFormatter;
+import com.github.mikephil.charting.formatter.IValueFormatter;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
+import com.github.mikephil.charting.utils.ViewPortHandler;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,66 +47,38 @@ public class LineChartActivity  extends AppCompatActivity {
 
         mLineChart = findViewById(R.id.mLineChar);
 
-//        List<Entry> valsComp1 = new ArrayList<Entry>();
-//        List<Entry> valsComp2 = new ArrayList<Entry>();
-//
-//        Entry c1e1 = new Entry(0f, 100000f); // 0 == quarter 1
-//        valsComp1.add(c1e1);
-//        Entry c1e2 = new Entry(1f, 1000f); // 1 == quarter 2 ...
-//        valsComp1.add(c1e2);
-//        valsComp1.add(new Entry(2f,2000f));
-//        valsComp1.add(new Entry(3f,32000f));
-//        valsComp1.add(new Entry(4f,234000f));
-//        valsComp1.add(new Entry(5f,90000f));
-//        // and so on ...
-////        Entry c2e1 = new Entry(0f, 130000f); // 0 == quarter 1
-////        valsComp2.add(c2e1);
-////        Entry c2e2 = new Entry(1f, 115000f); // 1 == quarter 2 ...
-////        valsComp2.add(c2e2);
-//
-//
-//        LineDataSet setComp1 = new LineDataSet(valsComp1, "Company 1");
-//        setComp1.setAxisDependency(YAxis.AxisDependency.LEFT);
-////        LineDataSet setComp2 = new LineDataSet(valsComp2, "Company 2");
-////        setComp2.setAxisDependency(YAxis.AxisDependency.LEFT);
-//
-//
-//        XAxis xAxis = mLineChart.getXAxis();
-//        xAxis.setGranularity(1);
-//
-//        List<ILineDataSet> dataSets = new ArrayList<ILineDataSet>();
-////        dataSets.add(setComp1);
-////        dataSets.add(setComp2);
-//        LineData data = new LineData( );
-//        data.addDataSet(new LineDataSet(valsComp1,"测试"));
-//        mLineChart.setData(data);
-//        mLineChart.invalidate(); // refresh
-////        LineData lineData = new LineData();
-////
-////        Description description = new Description();
-////        description.setText("MDescription");
-////
-////        description.setTextColor(Color.RED);
-////        mLineChart.setDescription(description);
-////        mLineChart.setData(lineData);
-
-
         List<Entry> entryList = new ArrayList<>();
-        entryList.add(new Entry(0,1000));
+         entryList.add(new Entry(1,1000));
         entryList.add(new Entry(2,900));
         entryList.add(new Entry(3,500));
         entryList.add(new Entry(4,100));
-        entryList.add(new Entry(5,900));
-        entryList.add(new Entry(5,10));
+        entryList.add(new Entry(5,0));
+        entryList.add(new Entry(6,900));
 
 
         //设置x轴
         XAxis xAxis = mLineChart.getXAxis();
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
-        xAxis.setTextSize(10);
+        xAxis.setTextSize(13);
         xAxis.setTextColor(Color.RED);
-        xAxis.setDrawAxisLine(true);
-        xAxis.setDrawGridLines(false);
+         xAxis.setDrawAxisLine(true);
+        xAxis.setDrawGridLines(false);//是否绘制竖的分割线
+        xAxis.setDrawLabels(true);
+        xAxis.setAxisLineWidth(1);
+        xAxis.setGridLineWidth(0.5f);
+         xAxis.enableGridDashedLine(10f,10f,10);
+        xAxis.setAxisMinimum(0);
+        xAxis.setAxisMaximum(9);
+        xAxis.setSpaceMin(40);
+        String[] arr = new String[]{"","1月","2月","3月","4月","5月","6月","7月","8月","","10月","11月","12月"};
+        xAxis.setLabelCount(9);
+        xAxis.setValueFormatter(new IAxisValueFormatter() {
+            @Override
+            public String getFormattedValue(float value, AxisBase axis) {
+                return arr[(int) value];
+            }
+        });
+
 
         //设置左y轴
         YAxis leftYAxis = mLineChart.getAxisLeft();
@@ -110,14 +86,21 @@ public class LineChartActivity  extends AppCompatActivity {
         leftYAxis.setTextColor(Color.GREEN);
         leftYAxis.setTextSize(11);
         leftYAxis.setDrawZeroLine(false);
-        leftYAxis.setEnabled(false);
+         leftYAxis.setDrawLabels(false);
+         leftYAxis.setDrawTopYLabelEntry(false);
+         leftYAxis.setDrawAxisLine(false);
+        leftYAxis.setDrawGridLines(true);
+        leftYAxis.enableGridDashedLine(10f,10f,10);
+        leftYAxis.setSpaceMax(10f);
+        leftYAxis.setAxisMinimum(0f);
 
         //设置右y轴
         YAxis rightYAxis = mLineChart.getAxisRight();
-        rightYAxis.setDrawZeroLine(false);
+        rightYAxis.setDrawZeroLine(true);
         rightYAxis.setDrawLabels(false);
         rightYAxis.setDrawLabels(false);
         rightYAxis.setEnabled(false);
+
 
         mLineChart.setTouchEnabled(false);//设置是否可以触摸
         mLineChart.setDragEnabled(false);//设置是否可以拖拽
@@ -133,7 +116,7 @@ public class LineChartActivity  extends AppCompatActivity {
 
         //设置图例
         Legend legend = mLineChart.getLegend();
-        legend.setEnabled(true);
+        legend.setEnabled(false);
         legend.setTextColor(Color.GRAY);//设置颜色
         legend.setTextSize(12);//设置大小
         legend.setTypeface(Typeface.DEFAULT);
@@ -167,25 +150,33 @@ public class LineChartActivity  extends AppCompatActivity {
         LineDataSet lineDataSet = new LineDataSet(entryList,"第一条数据第一条数据第一条数据第一条数据第一条数据第一条数据第一条数据第一条数据第一条数据");
         //设置是否填满
         lineDataSet.setFillColor(Color.GRAY);
-        lineDataSet.setDrawFilled(true);
+        lineDataSet.setDrawFilled(false);
 
         //设置数据小圆点
-        lineDataSet.setCircleColor(Color.RED);
-        lineDataSet.setCircleRadius(3);
-        lineDataSet.setCircleColorHole(Color.GREEN);
+        lineDataSet.setCircleColor(Color.parseColor("#58CEFF"));
+        lineDataSet.setCircleRadius(4);
+        lineDataSet.setCircleColorHole(Color.parseColor("#58CEFF"));
         lineDataSet.setValueTextColor(Color.BLACK);
 
         //设置折线颜色
-        lineDataSet.setLineWidth(1);
-        lineDataSet.setColor(Color.LTGRAY);
+        lineDataSet.setLineWidth(2);
+        lineDataSet.setColor(Color.parseColor("#58CEFF"));
         lineDataSet.setValueTextSize(10);
 
+
         LineData lineData = new LineData(lineDataSet);
-        //是否绘制顶部的值
-        lineData.setDrawValues(false);
+         //是否绘制顶部的值
+        lineData.setDrawValues(true);
+
+        lineData.setValueFormatter(new IValueFormatter() {
+            @Override
+            public String getFormattedValue(float value, Entry entry, int dataSetIndex, ViewPortHandler viewPortHandler) {
+                return (int )value +"ddd";
+            }
+        });
 
         lineData.addDataSet(lineDataSet);
-        mLineChart.setData(lineData);
+         mLineChart.setData(lineData);
 
      }
 }

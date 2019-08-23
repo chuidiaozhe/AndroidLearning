@@ -4,15 +4,11 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.DisplayMetrics;
-import android.util.TypedValue;
-import android.view.Gravity;
+
 import android.view.View;
 
 import com.andorid.material.design.demo.R;
-import com.app.hubert.guide.NewbieGuide;
-import com.app.hubert.guide.model.GuidePage;
-import com.app.hubert.guide.model.RelativeGuide;
+
 
 /**
  * Create by Xiangshifu
@@ -43,6 +39,6 @@ public class GuideActivity extends AppCompatActivity  implements View.OnClickLis
 
     private void simpleUse(){
 //        NewbieGuide.with(this).addGuidePage(GuidePage.newInstance().addHighLight(findViewById(R.id.btn_simple_user)).setLayoutRes(R.layout.activity_main)).setLabel("simple_guide").alwaysShow(true).show();
-         NewbieGuide.with(this).addGuidePage(GuidePage.newInstance().addHighLight(findViewById(R.id.btn_simple_user),new RelativeGuide(R.layout.activity_main,Gravity.RIGHT,100)).setBackgroundColor(Color.parseColor("#33333333"))).setLabel("ssss").alwaysShow(true).show();
+//         NewbieGuide.with(this).addGuidePage(GuidePage.newInstance().addHighLight(findViewById(R.id.btn_simple_user),new RelativeGuide(R.layout.activity_main,Gravity.RIGHT,100)).setBackgroundColor(Color.parseColor("#33333333"))).setLabel("ssss").alwaysShow(true).show();
     }
 }
