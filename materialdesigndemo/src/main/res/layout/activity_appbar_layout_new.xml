@@ -26,6 +26,27 @@
                 android:fitsSystemWindows="true"
                 app:layout_collapseMode="parallax"
                 />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                app:layout_collapseMode="parallax"
+                android:text="parallax"
+                app:layout_collapseParallaxMultiplier="0.8"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                 />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                app:layout_collapseMode="pin"
+                android:text="pin"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:layout_gravity="bottom"
+                />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="40dp"

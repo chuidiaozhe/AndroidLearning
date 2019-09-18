@@ -6,8 +6,19 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
- <financer.kuaishoudan.com.canvasdemo.LayerView
-     android:id="@+id/layerview"
+ <Button
+     android:id="@+id/tv_clear"
+     android:text="清除"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:textColor="@android:color/black"
+     />
+ <ImageView
+     android:id="@+id/image"
+     android:layout_width="wrap_content"
+     android:layout_height="100dp" />
+ <financer.kuaishoudan.com.canvasdemo.SignatureView
+     android:id="@+id/view"
      android:layout_width="wrap_content"
      android:layout_height="wrap_content" />
 

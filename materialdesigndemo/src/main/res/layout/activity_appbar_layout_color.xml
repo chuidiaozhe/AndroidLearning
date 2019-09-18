@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="250dp"
             app:contentScrim="@color/colorAccent"
-            app:expandedTitleMarginBottom="100dp"
+            app:expandedTitleMarginBottom="200dp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <RelativeLayout
